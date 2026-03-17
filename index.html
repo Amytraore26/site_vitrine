@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteBoots - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #fbbf24, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #fbbf24, #d97706);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-black text-white sticky top-0 z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2 group">
+                    <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                    </svg>
+                    <span class="text-2xl font-bold tracking-tight">
+                        AMG<span class="text-yellow-400">BOOTS</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link active text-sm uppercase tracking-wide text-yellow-400">Acceuil</a>
+                    <a href="product.html" class="nav-link text-sm uppercase tracking-wide text-white/80 hover:text-white">Produits</a>
+                    <a href="about.html" class="nav-link text-sm uppercase tracking-wide text-white/80 hover:text-white">A propos</a>
+                    <a href="contact.html" class="nav-link text-sm uppercase tracking-wide text-white/80 hover:text-white">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white hover:text-yellow-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobileMenu" class="hidden md:hidden pb-6 space-y-4">
+                <a href="index.html" class="block text-sm uppercase tracking-wide text-yellow-400">Home</a>
+                <a href="product.html" class="block text-sm uppercase tracking-wide text-white/80 hover:text-white">Produits</a>
+                <a href="about.html" class="block text-sm uppercase tracking-wide text-white/80 hover:text-white">About</a>
+                <a href="contact.html" class="block text-sm uppercase tracking-wide text-white/80 hover:text-white">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1734652246537-104c43a68942?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NjZXIlMjBzdGFkaXVtJTIwZmllbGQlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzczNzM4OTk1fDA&ixlib=rb-4.1.0&q=80&w=1080');">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="max-w-3xl">
+    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        Chaussures de football d’élite
+        <span class="block gradient-text">Pour les champions</span>
+    </h1>
+    <p class="text-xl text-white/80 mb-8 leading-relaxed">
+        Des chaussures de football de qualité professionnelle inspirées des plus grands joueurs du monde. Améliorez vos performances avec des équipements haut de gamme conçus pour la victoire.
+    </p>
+    <a href="product.html">
+        <button class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-2 hover:shadow-2xl transition-shadow">
+            <span>Voir plus...</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+    </a>
+</div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-black mb-4">Produits en vedette</h2>
+            <p class="text-gray-600 text-lg">Nos chaussures d’élite les plus populaires</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="hover-lift group relative bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+                <div class="absolute top-4 right-4 z-10">
+                    <div class="bg-black/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">Noir</div>
+                </div>
+                <div class="aspect-square overflow-hidden bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1768696082140-e042cf8223e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBmb290YmFsbCUyMGJvb3RzJTIwY2xlYXRzJTIwYmxhY2t8ZW58MXx8fHwxNzczNzM4OTkzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Shadow Elite Pro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-black group-hover:text-yellow-600 transition-colors">Shadow Elite Pro</h3>
+                    <div class="flex items-center justify-between">
+                        <p class="text-2xl font-bold text-black">$299</p>
+                        <button class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-4 py-2 rounded-full flex items-center space-x-2 hover:shadow-lg transition-shadow">
+                            <span class="text-sm font-bold">Voir les détails</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="hover-lift group relative bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+                <div class="absolute top-4 left-4 z-10 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black text-xs font-bold px-3 py-1 rounded-full">NOUVEAU</div>
+                <div class="absolute top-4 right-4 z-10">
+                    <div class="bg-black/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">Blanc/Or</div>
+                </div>
+                <div class="aspect-square overflow-hidden bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1710504989854-fe0623b447f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb290YmFsbCUyMHNvY2NlciUyMHNob2VzJTIwd2hpdGUlMjBnb2xkfGVufDF8fHx8MTc3MzczODk5M3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Gold Strike Limited" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-black group-hover:text-yellow-600 transition-colors">Gold Strike Limited</h3>
+                    <div class="flex items-center justify-between">
+                        <p class="text-2xl font-bold text-black">$349</p>
+                        <button class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-4 py-2 rounded-full flex items-center space-x-2 hover:shadow-lg transition-shadow">
+                            <span class="text-sm font-bold">Voir les détails</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="hover-lift group relative bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+                <div class="absolute top-4 left-4 z-10 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black text-xs font-bold px-3 py-1 rounded-full">NOUVEAU</div>
+                <div class="absolute top-4 right-4 z-10">
+                    <div class="bg-black/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">Multi</div>
+                </div>
+                <div class="aspect-square overflow-hidden bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1705585850747-690a897a3135?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMGZvb3RiYWxsJTIwYm9vdHMlMjBwcm9kdWN0fGVufDF8fHx8MTc3MzczODk5NHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Velocity Phantom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-2 text-black group-hover:text-yellow-600 transition-colors">Velocity Phantom</h3>
+                    <div class="flex items-center justify-between">
+                        <p class="text-2xl font-bold text-black">$279</p>
+                        <button class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-4 py-2 rounded-full flex items-center space-x-2 hover:shadow-lg transition-shadow">
+                            <span class="text-sm font-bold">Voir les détails</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Shop by Color -->
+  <section class="py-20 bg-black text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">Par couleur</h2>
+            <p class="text-white/60 text-lg">Trouvez votre style parfait</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group cursor-pointer hover:scale-105 transition-transform">
+                <div class="h-64 rounded-lg bg-gradient-to-br from-gray-900 to-black flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                    <div class="relative z-10 text-center">
+                        <h3 class="text-3xl font-bold mb-2 text-white">Chaussures noires</h3>
+                        <p class="text-white/60">Explorer la collection</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer hover:scale-105 transition-transform">
+                <div class="h-64 rounded-lg bg-gradient-to-br from-gray-200 to-white flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                    <div class="relative z-10 text-center">
+                        <h3 class="text-3xl font-bold mb-2 text-black">Chaussures blanches</h3>
+                        <p class="text-black/60">Explorer la collection</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer hover:scale-105 transition-transform">
+                <div class="h-64 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                    <div class="relative z-10 text-center">
+                        <h3 class="text-3xl font-bold mb-2 text-white">Chaussures colorées</h3>
+                        <p class="text-white/60">Explorer la collection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Brand Story -->
+   <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-bold text-black mb-6">Notre histoire</h2>
+                <p class="text-gray-600 text-lg mb-4 leading-relaxed">
+                    <Span>AMGBoots</Span> est née d’une passion pour le football et d’un engagement envers l’excellence. Nous proposons des chaussures de football de qualité professionnelle aux joueurs qui exigent le meilleur.
+                </p>
+                <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                    Inspirée par les plus grands joueurs du monde, notre collection propose des chaussures conçues pour la performance, le style et la victoire sur le terrain.
+                </p>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <svg class="w-12 h-12 mx-auto text-yellow-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                        <p class="font-bold text-black">Qualité premium</p>
+                    </div>
+                    <div class="text-center">
+                        <svg class="w-12 h-12 mx-auto text-yellow-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <p class="font-bold text-black">Performance maximale</p>
+                    </div>
+                    <div class="text-center">
+                        <svg class="w-12 h-12 mx-auto text-yellow-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                        </svg>
+                        <p class="font-bold text-black">Design d’élite</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-96 rounded-lg overflow-hidden shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1759338780815-8dbc17f7ddf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb290YmFsbCUyMHRyYWluaW5nJTIwYXRobGV0ZSUyMGxpZmVzdHlsZXxlbnwxfHx8fDE3NzM3Mzg5OTV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Football lifestyle" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+   <section class="py-20 bg-gradient-to-r from-black to-gray-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Prêt(e) à améliorer votre jeu ?</h2>
+        <p class="text-xl text-white/80 mb-8">
+            Rejoignez des milliers de joueurs qui font confiance à AMGBoots pour leurs chaussures de football
+        </p>
+        <a href="product.html">
+            <button class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-10 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-2 hover:shadow-2xl transition-shadow">
+                <span>Voir nos produits...</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </a>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+ <footer class="bg-black text-white border-t border-white/10"> 
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold">AMG<span class="text-yellow-400">BOOTS</span></h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                    Chaussures de football premium inspirées des plus grands joueurs du monde. Améliorez votre jeu avec des chaussures performantes d’élite.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-4 text-yellow-400">Liens rapides</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-white/60 hover:text-white transition-colors text-sm">Accueil</a></li>
+                    <li><a href="product.html" class="text-white/60 hover:text-white transition-colors text-sm">Produits</a></li>
+                    <li><a href="about.html" class="text-white/60 hover:text-white transition-colors text-sm">À propos</a></li>
+                    <li><a href="contact.html" class="text-white/60 hover:text-white transition-colors text-sm">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-4 text-yellow-400">Contact</h4>
+                <ul class="space-y-3">
+                    <li class="text-white/60 text-sm">Abidjan, Côte d'Ivoire</li>
+                    <li class="text-white/60 text-sm">+225 011 012 2255</li>
+                    <li class="text-white/60 text-sm">amgboots@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-white/10 text-center text-white/40 text-sm">
+            <p>&copy; 2026 AMGBoots. Tous droits réservés. Conçu pour les champions.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
